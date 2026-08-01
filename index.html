@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>생산처 모니터링 · 협력사 단가 검토 — 한빛모빌리티</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="logo-dot"></span>
+      <span class="brand">생산처 모니터링 · 단가 검토</span>
+    </div>
+    <div class="topbar-right">
+      <button class="link-btn" id="info-btn">이 도구에 대해</button>
+      <button class="link-btn" id="reset-data-btn">데이터 초기화</button>
+      <span class="badge">한빛모빌리티 예시 데이터 · 실존 기업과 무관</span>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <section id="summary-banner" class="banner">
+      <!-- JS가 채움 -->
+    </section>
+
+    <h2 class="section-title">생산처 현황</h2>
+    <section class="cards" id="site-cards">
+      <!-- JS가 site 카드를 채움 -->
+    </section>
+
+    <section class="detail-row">
+      <div class="panel" id="drilldown-panel">
+        <!-- JS가 선택된 생산처의 추이를 채움 -->
+      </div>
+    </section>
+
+    <h2 class="section-title">협력사 단가 검토</h2>
+    <section class="detail-row">
+      <div class="panel cost-panel" id="cost-review-panel">
+        <!-- JS가 원가 검토(케이스 탭 + 항목별 분해표)를 채움 -->
+      </div>
+    </section>
+
+    <section class="detail-row">
+      <div class="panel" id="log-panel">
+        <!-- JS가 검토 이력 로그를 채움 -->
+      </div>
+    </section>
+
+    <h2 class="section-title">관리</h2>
+    <p class="section-sub">협력사·생산처가 바뀌면 여기서 직접 추가·수정·삭제하세요. 데이터는 이 브라우저에 저장됩니다.</p>
+    <section class="two-col">
+      <div class="panel">
+        <div class="manage-header">
+          <span class="panel-title">생산처</span>
+          <button class="btn btn-sm" id="add-site-btn">+ 생산처 추가</button>
+        </div>
+        <div id="manage-sites-list"></div>
+      </div>
+      <div class="panel">
+        <div class="manage-header">
+          <span class="panel-title">협력사 단가 검토 건</span>
+          <button class="btn btn-sm" id="add-case-btn">+ 검토 건 추가</button>
+        </div>
+        <div id="manage-cases-list"></div>
+      </div>
+    </section>
+
+    <footer class="disclaimer">
+      본 화면은 자동차 부품 산업 구조를 참고하여 제작한 가상 시나리오이며, 실제 기업과 무관합니다.
+    </footer>
+
+  </main>
+
+  <div id="modal-root"></div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
