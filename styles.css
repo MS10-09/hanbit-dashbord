@@ -52,7 +52,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  padding: 16px 20px;
   background: var(--surface-2);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -64,12 +66,15 @@ body {
   display: flex;
   align-items: center;
   gap: 9px;
+  white-space: nowrap;
 }
 
 .topbar-right {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .logo-dot {
@@ -77,12 +82,14 @@ body {
   height: 10px;
   border-radius: 50%;
   background: var(--text-primary);
+  flex-shrink: 0;
 }
 
 .brand {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .badge {
@@ -92,6 +99,17 @@ body {
   background: var(--surface-1);
   color: var(--text-muted);
   white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topbar-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 
 /* ---------- 섹션 제목 ---------- */
@@ -475,6 +493,7 @@ body {
   font-size: 12.5px;
   cursor: pointer;
   padding: 0;
+  white-space: nowrap;
 }
 .link-btn.danger { color: var(--red-fill); }
 
